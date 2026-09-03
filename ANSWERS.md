@@ -2,7 +2,7 @@
 
 Học viên: **Nguyễn Quang Hà — 2A202601424**. Bài làm cá nhân trên repo fork `quangha-dev/TRACK2_Day28_2A202601424_NguyenQuangHa`, nhánh nộp `main`.
 
-Codelab trên web hướng dẫn tạo nhánh trong repo private của tổ chức, trong khi thông báo cập nhật trên Discord yêu cầu học viên fork repo rồi làm bài. Bài này làm theo hướng dẫn Discord và nộp nhánh `main` của fork; giảng viên đã cho phép dùng fork hiện tại. Sự khác nhau chỉ nằm ở nơi lưu mã. Toàn bộ hợp đồng kỹ thuật, integration matrix và danh sách bằng chứng vẫn được giữ nguyên.
+**Đánh giá hướng dẫn:** Hướng dẫn quá khó hiểu: trong codelab yêu cầu tạo nhánh trên repo gốc, nhưng trên Discord lại yêu cầu fork repo.
 
 ## Phần thực hiện
 

@@ -10,4 +10,4 @@ Trọng số `model.safetensors` có 988.097.824 byte và SHA-256 `fdf756fa7fcbe
 
 Các giá trị trên nằm trong `evidence/ip07-vllm-identity.json` và log runtime. Bộ GPU integration/inference không được chạy lại sau khi server sẵn sàng theo quyết định chốt bài ngay, nên báo cáo không coi serving trace hay completion là đã xác nhận.
 
-Trọng số nằm trong `.lab28/vllm-model/`; môi trường Python GPU và cache nằm ngoài mã nguồn. Các thư mục này không thuộc gói nộp. `ports.local` chỉ giữ cấu hình chạy trên máy, được Git ignore. Codelab web nói làm trên nhánh repo private, còn Discord yêu cầu fork; bài này theo Discord và giảng viên đã cho phép dùng fork hiện tại.
+Trọng số nằm trong `.lab28/vllm-model/`; môi trường Python GPU và cache nằm ngoài mã nguồn. Các thư mục này không thuộc gói nộp. `ports.local` chỉ giữ cấu hình chạy trên máy, được Git ignore.

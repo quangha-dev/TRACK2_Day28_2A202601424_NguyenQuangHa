@@ -6,7 +6,7 @@ Repo nộp: [quangha-dev/TRACK2_Day28_2A202601424_NguyenQuangHa](https://github.
 
 ## Cách áp dụng hướng dẫn repo
 
-Codelab trên web yêu cầu tạo nhánh trong repo private của tổ chức. Hướng dẫn cập nhật trên Discord yêu cầu fork repo rồi làm bài. Bài này làm theo Discord trên fork cá nhân; giảng viên đã cho phép giữ fork hiện tại. Việc dùng fork không thay đổi mã nguồn khung, integration matrix, test hay tiêu chí bằng chứng.
+**Đánh giá hướng dẫn:** Hướng dẫn quá khó hiểu: trong codelab yêu cầu tạo nhánh trên repo gốc, nhưng trên Discord lại yêu cầu fork repo.
 
 ## Kết quả đã xác nhận
 
