@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/quangha-dev/TRACK2_Day28_2A202601424_NguyenQuangHa.git
-    targetRevision: refs/tags/v3.0.0
+    targetRevision: b3c323daec70e6444b393c017b9d47e66c65a0f7
     path: deploy/kubernetes/base
   destination:
     server: https://kubernetes.default.svc
