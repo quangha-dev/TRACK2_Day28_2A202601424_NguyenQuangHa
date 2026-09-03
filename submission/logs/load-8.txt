@@ -1,0 +1,33 @@
+UTC: 2026-09-03T16:25:08.027895+00:00
+Command: uv run --no-sync python load-tests/run_profile.py --requests 200 --workers 8 --warmup 5 --output submission/load-8.json
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+{
+  "started_at_utc": "2026-09-03T16:25:10.810121+00:00",
+  "endpoint": "/ready",
+  "method": "GET",
+  "requests": 200,
+  "workers": 8,
+  "warmup_requests": 5,
+  "duration_seconds": 2.891954299993813,
+  "throughput_rps": 69.15738606257639,
+  "successful_rps": 12.10254256095087,
+  "status_counts": {
+    "200": 35,
+    "429": 165
+  },
+  "error_rate": 0.825,
+  "latency_ms": {
+    "p50": 5.112399987410754,
+    "p95": 446.58419996267185,
+    "p99": 1659.0275000198744
+  },
+  "successful_latency_ms": {
+    "p50": 420.0786000001244,
+    "p95": 1731.9847999606282,
+    "p99": 1755.0564999692142
+  },
+  "note": "Status 0 means transport failure; all-request latency includes errors."
+}
+
+Exit code: 0

@@ -1,0 +1,9 @@
+UTC: 2026-09-03T16:27:18.327381+00:00
+Command: uv run --no-sync pytest starter-tests tests -q
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+........................................................................ [ 75%]
+.......................                                                  [100%]
+95 passed in 4.38s
+
+Exit code: 0

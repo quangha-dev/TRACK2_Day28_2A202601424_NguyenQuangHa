@@ -1,0 +1,7 @@
+UTC: 2026-09-03T16:23:17.024296+00:00
+Command: uv run --no-sync python scripts/check_portability.py
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+OK    supported workflow is host-path and shell independent
+
+Exit code: 0

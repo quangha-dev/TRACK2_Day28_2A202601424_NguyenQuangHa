@@ -1,0 +1,26 @@
+UTC: 2026-09-03T16:20:35.584687+00:00
+Command: uv run --no-sync lab28 index --source file
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+embedding 13 document(s) from file
+D:\DEV\Project\AI_THUC_CHIEN\LAB\NGAY28\TRACK2_Day28_2A202601424_NguyenQuangHa\src\lab28_platform\vector_store.py:83: UserWarning: The model sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 now uses mean pooling instead of CLS embedding. In order to preserve the previous behaviour, consider either pinning fastembed version to 0.5.1 or using `add_custom_model` functionality.
+  self._dense = TextEmbedding(model_name=self._settings.embedding_model, **kwargs)
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+D:\DEV\Project\AI_THUC_CHIEN\LAB\NGAY28\TRACK2_Day28_2A202601424_NguyenQuangHa\.venv\Lib\site-packages\huggingface_hub\file_download.py:141: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in D:\DEV\Project\AI_THUC_CHIEN\LAB\NGAY28\TRACK2_Day28_2A202601424_NguyenQuangHa\.lab28\fastembed\models--qdrant--paraphrase-multilingual-MiniLM-L12-v2-onnx-Q. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Fetching 5 files:  20%|██        | 1/5 [00:00<00:03,  1.14it/s]Fetching 5 files:  40%|████      | 2/5 [00:01<00:01,  2.24it/s]Fetching 5 files:  80%|████████  | 4/5 [00:43<00:13, 13.44s/it]Fetching 5 files: 100%|██████████| 5/5 [01:12<00:00, 18.32s/it]Fetching 5 files: 100%|██████████| 5/5 [01:12<00:00, 14.52s/it]
+Fetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]D:\DEV\Project\AI_THUC_CHIEN\LAB\NGAY28\TRACK2_Day28_2A202601424_NguyenQuangHa\.venv\Lib\site-packages\huggingface_hub\file_download.py:141: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in D:\DEV\Project\AI_THUC_CHIEN\LAB\NGAY28\TRACK2_Day28_2A202601424_NguyenQuangHa\.lab28\fastembed\models--Qdrant--bm25. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Fetching 18 files:   6%|▌         | 1/18 [00:00<00:09,  1.78it/s]Fetching 18 files:  11%|█         | 2/18 [00:00<00:07,  2.07it/s]Fetching 18 files:  50%|█████     | 9/18 [00:01<00:00, 12.13it/s]Fetching 18 files:  72%|███████▏  | 13/18 [00:01<00:00,  9.98it/s]Fetching 18 files: 100%|██████████| 18/18 [00:02<00:00,  9.69it/s]Fetching 18 files: 100%|██████████| 18/18 [00:02<00:00,  8.45it/s]
+{
+  "source": "file",
+  "collection": "lab28_documents",
+  "documents_submitted": 13,
+  "points_upserted": 13,
+  "points_total": 13,
+  "embedding_model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2@faf4aa4225822f3bc6376869cb1164e8e3feedd0"
+}
+
+Exit code: 0

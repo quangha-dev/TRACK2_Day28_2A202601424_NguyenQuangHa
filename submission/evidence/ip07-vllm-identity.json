@@ -1,0 +1,20 @@
+{
+  "captured_at_utc": "2026-09-03T17:08:01.8410006Z",
+  "verified": true,
+  "server": "vLLM",
+  "version": "0.28.0",
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "endpoints": {
+    "version": "GET http://localhost:8001/version -> 0.28.0",
+    "models": "GET http://localhost:8001/v1/models -> configured model ID",
+    "metrics": "GET http://localhost:8001/metrics -> HTTP 200"
+  },
+  "vllm_metric_lines": 349,
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "weights": {
+    "bytes": 988097824,
+    "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe"
+  },
+  "scope": "Real server identity and metrics verified; GPU integration completion/serving trace not rerun before submission"
+}

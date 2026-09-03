@@ -1,0 +1,246 @@
+UTC: 2026-09-03T16:21:55.325012+00:00
+Command: uv run --no-sync lab28 seed --via-gateway
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+documents: 13 accepted, 0 rejected
+feedback: 12 accepted, 0 rejected
+{
+  "target": "http://localhost:8080",
+  "accepted": {
+    "documents": [
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "a08eebce5447482d9d8d3450bfa5bf86",
+        "idempotency_key": "doc:doc-ip01-kafka:d7089177544aeae3578788aa1612914e",
+        "entity_id": "doc-ip01-kafka",
+        "topic": "data.raw",
+        "trace_id": "f99b4bc6ca1cb1987a088305856e0795"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "539ab66d36d140998e3d3679c15a85f7",
+        "idempotency_key": "doc:doc-ip02-airflow:9b7e8bc4f2409294439202f5d734c323",
+        "entity_id": "doc-ip02-airflow",
+        "topic": "data.raw",
+        "trace_id": "1010d803b8e1fea503c179f4ed845568"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "f06e1ec8645044a4a6b5672461d54a1e",
+        "idempotency_key": "doc:doc-ip03-delta:016a8ab972a0b39b02f80b29e043f020",
+        "entity_id": "doc-ip03-delta",
+        "topic": "data.raw",
+        "trace_id": "9de606e0e01a858b7cbcd1dd3bc7a6a5"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "71deb42367d346f5b0b2f56897069587",
+        "idempotency_key": "doc:doc-ip04-feast:e910ca4ed86df2ccefd6f5c57a7b7c24",
+        "entity_id": "doc-ip04-feast",
+        "topic": "data.raw",
+        "trace_id": "da740a1718e3cde68daa8eee89c2e76b"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "ba4ebb2cf4064ac283badfe493425501",
+        "idempotency_key": "doc:doc-ip05-qdrant:04b9607993855f1c41e3f2eae24f18ca",
+        "entity_id": "doc-ip05-qdrant",
+        "topic": "data.raw",
+        "trace_id": "03180fd87670ed814fa2761f045ca5c4"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "62d1992a589248b39b521036282741d8",
+        "idempotency_key": "doc:doc-ip06-mlflow:d29d6d89db0db9c04ccb5152078c2c83",
+        "entity_id": "doc-ip06-mlflow",
+        "topic": "data.raw",
+        "trace_id": "b535940749de0ce18e06ac6fa5f8839b"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "54144901006d4fffb9866e35e48a0cd6",
+        "idempotency_key": "doc:doc-ip07-vllm:31f59173d9613f4e261856ede44c8e05",
+        "entity_id": "doc-ip07-vllm",
+        "topic": "data.raw",
+        "trace_id": "7d33b3e33e8ec613a1e7cb103ce2557a"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "eec5472b813841d6a98371365efa3788",
+        "idempotency_key": "doc:doc-ip08-gateway:e4dfa038a8a56b7b26089da6529bfa8a",
+        "entity_id": "doc-ip08-gateway",
+        "topic": "data.raw",
+        "trace_id": "af189d51a33005d6c4bee6bc3b6f322a"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "488ca456b32d48d2a2fd16f57fd56923",
+        "idempotency_key": "doc:doc-ip09-metrics:c77911d86b4efa0d36f5a3012d814580",
+        "entity_id": "doc-ip09-metrics",
+        "topic": "data.raw",
+        "trace_id": "70d18fe7d3bc1dc762bdeaf769fddf28"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "0315ff7736ab44eca8afef876202a83a",
+        "idempotency_key": "doc:doc-ip10-tracing:95f761abc8382635d40c5a1402c15e38",
+        "entity_id": "doc-ip10-tracing",
+        "topic": "data.raw",
+        "trace_id": "fc6d7e2e5a604a5877ee447a74c80beb"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "5ab34760d68d4d06b3dcc26f31a51fdc",
+        "idempotency_key": "doc:doc-health-semantics:39bf239d7881f0b165d4141abadc305f",
+        "entity_id": "doc-health-semantics",
+        "topic": "data.raw",
+        "trace_id": "99f9d38925b36805f9e4f7c1b82773fb"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "82ebedcb72914e45904413d5d403d51a",
+        "idempotency_key": "doc:doc-latency-budget:97027cdd73da5c04346a93a37deb79b7",
+        "entity_id": "doc-latency-budget",
+        "topic": "data.raw",
+        "trace_id": "52aadc99d3cc43b3c3f6e69c8b6cb956"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "57343443a5f14f31ad040431d66c0443",
+        "idempotency_key": "doc:doc-degraded-policy:68db776fa8b109d09fe8554e0f85cc7e",
+        "entity_id": "doc-degraded-policy",
+        "topic": "data.raw",
+        "trace_id": "7a8a434a38b1a2a8c44da1fc4f74db19"
+      }
+    ],
+    "feedback": [
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "3d39ece40114421787b8b0b998d05bf3",
+        "idempotency_key": "fb:asker-001:f3facde79d83f95f289b379395909a13",
+        "entity_id": "asker-001",
+        "topic": "data.raw",
+        "trace_id": "fca64260ed440afafdb13dcc1f3a5730"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "d3af160fde284144bf1f99ac7d2fb907",
+        "idempotency_key": "fb:asker-001:591e45fef80bdf65e304ea89f7ebbfdb",
+        "entity_id": "asker-001",
+        "topic": "data.raw",
+        "trace_id": "d791f2f0a947d7e649f205679c2dd353"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "8ad3fbc3b0604243a5a5cd3582a354dc",
+        "idempotency_key": "fb:asker-002:b41008bcdf50bd6b364faf7fd10d14a4",
+        "entity_id": "asker-002",
+        "topic": "data.raw",
+        "trace_id": "f718b7f40130b2581dd727fb7e563eb8"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "0b11fe194e0a45d7890b6a0a8d96749d",
+        "idempotency_key": "fb:asker-002:375f76713df85ca78213b292aa7b0aea",
+        "entity_id": "asker-002",
+        "topic": "data.raw",
+        "trace_id": "831290af64f49211c3ffa42f1f636027"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "0bac5741f7ca4923be072c5f781e3c19",
+        "idempotency_key": "fb:asker-003:b865bc7aed7a8e02b9bf46bbe2db2ddb",
+        "entity_id": "asker-003",
+        "topic": "data.raw",
+        "trace_id": "aecd953e389856901b4d4b4d4c95b03d"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "eaaed08ed3a345e9a2c218e0e9339178",
+        "idempotency_key": "fb:asker-003:5561621d910d0b17826d04064e2299be",
+        "entity_id": "asker-003",
+        "topic": "data.raw",
+        "trace_id": "3a0feec174e0d5ea218efd07488f10fd"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "0d6e7d245f804a0482057ac1a73907ce",
+        "idempotency_key": "fb:asker-004:e9ffe6b8117c980b1402e4d741ff60b5",
+        "entity_id": "asker-004",
+        "topic": "data.raw",
+        "trace_id": "3beee530d4bc1b9705f7e9e2951a14ec"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "c251932cc0d74481a8d713a5286b8f68",
+        "idempotency_key": "fb:asker-004:5eda48b9b1e2545ee36c4e6b7777c64f",
+        "entity_id": "asker-004",
+        "topic": "data.raw",
+        "trace_id": "2ef94edf4446e6afcd7d04cd14528c99"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "d9869e5c90f1448198c5d95f4eeca1cb",
+        "idempotency_key": "fb:asker-005:ba540e79cfee37fd1e33b083306cdcdf",
+        "entity_id": "asker-005",
+        "topic": "data.raw",
+        "trace_id": "f49902345137da918b6b6d2e3d39cded"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "f2ea84cd59b5438c97492ce9e3818cd2",
+        "idempotency_key": "fb:asker-005:45cdd1db2ed5b187f236771ec14512a1",
+        "entity_id": "asker-005",
+        "topic": "data.raw",
+        "trace_id": "15bf5904fbadea90e674b42f02869542"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "6445836acbaa4539b89ab73f213f724d",
+        "idempotency_key": "fb:asker-006:abf3c6ff99f52cba1b4e923fa4a9dfe3",
+        "entity_id": "asker-006",
+        "topic": "data.raw",
+        "trace_id": "3602d718372700a4fecec2ce1fc246ab"
+      },
+      {
+        "schema_version": "1",
+        "status": "accepted",
+        "event_id": "2702091421204bacafdc84b1a4ad5793",
+        "idempotency_key": "fb:asker-006:f18e1f005a29ad871c22fc13df93eaf9",
+        "entity_id": "asker-006",
+        "topic": "data.raw",
+        "trace_id": "3d23d95232bcbeb0caa8e4e943a330b7"
+      }
+    ]
+  },
+  "rejected": {
+    "documents": [],
+    "feedback": []
+  }
+}
+
+Exit code: 0

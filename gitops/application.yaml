@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/VinUni-AI20k/Day28-Modern-Platform-Lab-Student.git
+    repoURL: https://github.com/quangha-dev/TRACK2_Day28_2A202601424_NguyenQuangHa.git
     targetRevision: refs/tags/v3.0.0
     path: deploy/kubernetes/base
   destination:

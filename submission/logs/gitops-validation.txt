@@ -1,0 +1,7 @@
+UTC: 2026-09-03T16:23:17.261934+00:00
+Command: uv run --no-sync python scripts/validate_manifests.py
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+Kubernetes and GitOps manifest contracts passed
+
+Exit code: 0

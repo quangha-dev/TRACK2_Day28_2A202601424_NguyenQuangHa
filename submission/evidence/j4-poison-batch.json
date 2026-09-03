@@ -1,0 +1,71 @@
+{
+  "captured_at_utc": "2026-09-03T16:36:33.268136+00:00",
+  "asker_id": "it-j4-14adf37c",
+  "poison_key": "it-j4-poison-14adf37c",
+  "dag_run": {
+    "dag_run_id": "it-bd9b5c92",
+    "dag_id": "lab28_ingestion_pipeline",
+    "logical_date": null,
+    "queued_at": "2026-09-03T16:36:05.552989Z",
+    "start_date": "2026-09-03T16:36:06.523153Z",
+    "end_date": "2026-09-03T16:36:28.637569Z",
+    "duration": 22.114416,
+    "data_interval_start": null,
+    "data_interval_end": null,
+    "run_after": "2026-09-03T16:36:05.542918Z",
+    "last_scheduling_decision": "2026-09-03T16:36:28.636181Z",
+    "run_type": "manual",
+    "state": "success",
+    "triggered_by": "rest_api",
+    "triggering_user_name": "airflow",
+    "conf": {},
+    "note": "IT-J4 poison batch 14adf37c",
+    "dag_versions": [
+      {
+        "id": "01a06815-6230-74f1-8249-2637bb616a48",
+        "version_number": 1,
+        "dag_id": "lab28_ingestion_pipeline",
+        "bundle_name": "dags-folder",
+        "bundle_version": null,
+        "created_at": "2026-09-03T16:23:46.992476Z",
+        "dag_display_name": "lab28_ingestion_pipeline",
+        "bundle_url": null
+      }
+    ],
+    "bundle_version": null,
+    "dag_display_name": "lab28_ingestion_pipeline",
+    "partition_key": null,
+    "partition_date": null
+  },
+  "dlq_before": 0,
+  "dlq_after": 1,
+  "dead_letters": [
+    {
+      "schema_version": "1",
+      "original_topic": "data.raw",
+      "original_partition": 1,
+      "original_offset": 28,
+      "original_key": "it-j4-poison-14adf37c",
+      "error_category": "validation",
+      "error_detail": "1 validation error for IngestionEvent\n  Invalid JSON: key must be a string at line 1 column 49 [type=json_invalid, input_value=b'{\"schema_version\": \"1\",...: \"14adf37c\", truncated', input_type=bytes]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+      "attempts": 1,
+      "failed_at": "2026-09-03T16:36:08.653857Z",
+      "traceparent": null,
+      "raw_payload_b64": "eyJzY2hlbWFfdmVyc2lvbiI6ICIxIiwgImV2ZW50X2lkIjogIjE0YWRmMzdjIiwgdHJ1bmNhdGVk"
+    }
+  ],
+  "good_rows": [
+    {
+      "idempotency_key": "fb:it-j4-14adf37c:f9cb2bbe3d6c5d4c1769f9892c2573a2",
+      "event_id": "ef743f09f7d245faaf42806c926d3f36",
+      "asker_id": "it-j4-14adf37c",
+      "text": "Phản hồi hợp lệ đi cùng bản tin hỏng 14adf37c.",
+      "rating": 5,
+      "locale": "vi",
+      "label": "positive",
+      "occurred_at": "2026-09-03 16:36:04.749101+00:00",
+      "traceparent": "00-665b2a725d9d2de6a067aadad92e52f3-78b783a926cd1df8-01"
+    }
+  ],
+  "assertion_passed": "integration-tests/test_j4_degraded_recovery.py::test_the_good_record_in_the_same_batch_still_reached_the_lakehouse"
+}

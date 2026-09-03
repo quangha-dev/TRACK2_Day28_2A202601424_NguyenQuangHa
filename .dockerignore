@@ -1,0 +1,14 @@
+.git
+.venv
+.lab28
+.pytest_temp
+.pytest_cache
+.ruff_cache
+**/__pycache__
+**/*.pyc
+.env
+.env.*
+ports.local
+evidence
+submission
+*.zip

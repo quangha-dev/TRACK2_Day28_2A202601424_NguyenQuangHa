@@ -1,0 +1,134 @@
+{
+  "captured_at_utc": "2026-09-03T16:35:19.787381+00:00",
+  "asker_id": "it-j2-d5752253",
+  "doc_id": "it-j2-doc-d5752253",
+  "idempotency_key": "fb:it-j2-d5752253:81a705488831ec01963ae6fcfd2fe6e4",
+  "accepted": [
+    {
+      "schema_version": "1",
+      "status": "accepted",
+      "event_id": "7464eef585664db49e7e40147775da67",
+      "idempotency_key": "fb:it-j2-d5752253:81a705488831ec01963ae6fcfd2fe6e4",
+      "entity_id": "it-j2-d5752253",
+      "topic": "data.raw",
+      "trace_id": "a0048c1f98e50655c5b82c95276e5c46"
+    },
+    {
+      "schema_version": "1",
+      "status": "accepted",
+      "event_id": "f6f08ed8b9cc4cb9ba3913a6adc9c81c",
+      "idempotency_key": "fb:it-j2-d5752253:81a705488831ec01963ae6fcfd2fe6e4",
+      "entity_id": "it-j2-d5752253",
+      "topic": "data.raw",
+      "trace_id": "7f4876a71f6f66a03f92c5ff92033c06"
+    },
+    {
+      "schema_version": "1",
+      "status": "accepted",
+      "event_id": "d699209c8bcc4482b6713064b5fa20b1",
+      "idempotency_key": "fb:it-j2-d5752253:81a705488831ec01963ae6fcfd2fe6e4",
+      "entity_id": "it-j2-d5752253",
+      "topic": "data.raw",
+      "trace_id": "c0c374983144e724dafd44e4d0553954"
+    }
+  ],
+  "first_run": {
+    "dag_run_id": "it-d3c9572f",
+    "dag_id": "lab28_ingestion_pipeline",
+    "logical_date": null,
+    "queued_at": "2026-09-03T16:34:15.817695Z",
+    "start_date": "2026-09-03T16:34:16.764990Z",
+    "end_date": "2026-09-03T16:34:41.077591Z",
+    "duration": 24.312601,
+    "data_interval_start": null,
+    "data_interval_end": null,
+    "run_after": "2026-09-03T16:34:15.812336Z",
+    "last_scheduling_decision": "2026-09-03T16:34:41.076110Z",
+    "run_type": "manual",
+    "state": "success",
+    "triggered_by": "rest_api",
+    "triggering_user_name": "airflow",
+    "conf": {},
+    "note": "IT-J2 first pass d5752253",
+    "dag_versions": [
+      {
+        "id": "01a06815-6230-74f1-8249-2637bb616a48",
+        "version_number": 1,
+        "dag_id": "lab28_ingestion_pipeline",
+        "bundle_name": "dags-folder",
+        "bundle_version": null,
+        "created_at": "2026-09-03T16:23:46.992476Z",
+        "dag_display_name": "lab28_ingestion_pipeline",
+        "bundle_url": null
+      }
+    ],
+    "bundle_version": null,
+    "dag_display_name": "lab28_ingestion_pipeline",
+    "partition_key": null,
+    "partition_date": null
+  },
+  "second_run": {
+    "dag_run_id": "it-884515d2",
+    "dag_id": "lab28_ingestion_pipeline",
+    "logical_date": null,
+    "queued_at": "2026-09-03T16:34:44.062228Z",
+    "start_date": "2026-09-03T16:34:45.832596Z",
+    "end_date": "2026-09-03T16:35:12.242570Z",
+    "duration": 26.409974,
+    "data_interval_start": null,
+    "data_interval_end": null,
+    "run_after": "2026-09-03T16:34:44.059382Z",
+    "last_scheduling_decision": "2026-09-03T16:35:12.241333Z",
+    "run_type": "manual",
+    "state": "success",
+    "triggered_by": "rest_api",
+    "triggering_user_name": "airflow",
+    "conf": {},
+    "note": "IT-J2 replay d5752253",
+    "dag_versions": [
+      {
+        "id": "01a06815-6230-74f1-8249-2637bb616a48",
+        "version_number": 1,
+        "dag_id": "lab28_ingestion_pipeline",
+        "bundle_name": "dags-folder",
+        "bundle_version": null,
+        "created_at": "2026-09-03T16:23:46.992476Z",
+        "dag_display_name": "lab28_ingestion_pipeline",
+        "bundle_url": null
+      }
+    ],
+    "bundle_version": null,
+    "dag_display_name": "lab28_ingestion_pipeline",
+    "partition_key": null,
+    "partition_date": null
+  },
+  "version_after_first": 5,
+  "version_after_second": 6,
+  "rows_after_first": [
+    {
+      "idempotency_key": "fb:it-j2-d5752253:81a705488831ec01963ae6fcfd2fe6e4",
+      "event_id": "f6f08ed8b9cc4cb9ba3913a6adc9c81c",
+      "asker_id": "it-j2-d5752253",
+      "text": "Phản hồi lặp lại cho bài kiểm thử d5752253.",
+      "rating": 4,
+      "locale": "vi",
+      "label": "positive",
+      "occurred_at": "2026-09-03 16:34:15.334665+00:00",
+      "traceparent": "00-7f4876a71f6f66a03f92c5ff92033c06-c8a3e5fd137e8271-01"
+    }
+  ],
+  "rows_after_second": [
+    {
+      "idempotency_key": "fb:it-j2-d5752253:81a705488831ec01963ae6fcfd2fe6e4",
+      "event_id": "d699209c8bcc4482b6713064b5fa20b1",
+      "asker_id": "it-j2-d5752253",
+      "text": "Phản hồi lặp lại cho bài kiểm thử d5752253.",
+      "rating": 4,
+      "locale": "vi",
+      "label": "positive",
+      "occurred_at": "2026-09-03 16:34:43.644931+00:00",
+      "traceparent": "00-c0c374983144e724dafd44e4d0553954-1287adc31cf428f0-01"
+    }
+  ],
+  "assertion_passed": "integration-tests/test_j2_idempotent_replay.py::test_the_vector_store_holds_exactly_one_point_for_the_document"
+}

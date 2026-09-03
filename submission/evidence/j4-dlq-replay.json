@@ -1,0 +1,58 @@
+{
+  "captured_at_utc": "2026-09-03T16:37:07.982306+00:00",
+  "asker_id": "it-j4-replay-ddecc3a2",
+  "idempotency_key": "fb:it-j4-replay-ddecc3a2:3851e21afa21521407904e03cb7471fd",
+  "replay_result": {
+    "replayed": 1,
+    "skipped": 1
+  },
+  "dag_run": {
+    "dag_run_id": "it-5b526898",
+    "dag_id": "lab28_ingestion_pipeline",
+    "logical_date": null,
+    "queued_at": "2026-09-03T16:36:40.237588Z",
+    "start_date": "2026-09-03T16:36:41.645816Z",
+    "end_date": "2026-09-03T16:37:04.269987Z",
+    "duration": 22.624171,
+    "data_interval_start": null,
+    "data_interval_end": null,
+    "run_after": "2026-09-03T16:36:40.233981Z",
+    "last_scheduling_decision": "2026-09-03T16:37:04.267397Z",
+    "run_type": "manual",
+    "state": "success",
+    "triggered_by": "rest_api",
+    "triggering_user_name": "airflow",
+    "conf": {},
+    "note": "IT-J4 replay ddecc3a2",
+    "dag_versions": [
+      {
+        "id": "01a06815-6230-74f1-8249-2637bb616a48",
+        "version_number": 1,
+        "dag_id": "lab28_ingestion_pipeline",
+        "bundle_name": "dags-folder",
+        "bundle_version": null,
+        "created_at": "2026-09-03T16:23:46.992476Z",
+        "dag_display_name": "lab28_ingestion_pipeline",
+        "bundle_url": null
+      }
+    ],
+    "bundle_version": null,
+    "dag_display_name": "lab28_ingestion_pipeline",
+    "partition_key": null,
+    "partition_date": null
+  },
+  "rows": [
+    {
+      "idempotency_key": "fb:it-j4-replay-ddecc3a2:3851e21afa21521407904e03cb7471fd",
+      "event_id": "4916fc319eb3429ab7882994113b2299",
+      "asker_id": "it-j4-replay-ddecc3a2",
+      "text": "Phản hồi được phát lại từ hàng đợi lỗi ddecc3a2.",
+      "rating": 3,
+      "locale": "vi",
+      "label": "neutral",
+      "occurred_at": "2026-09-03 16:36:33.330973+00:00",
+      "traceparent": "00-5a1f14ac953c09fb08c24969afb38e15-9aea69d1ae0853df-01"
+    }
+  ],
+  "assertion_passed": "integration-tests/test_j4_degraded_recovery.py::test_the_replayed_event_does_not_duplicate_the_row"
+}

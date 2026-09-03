@@ -1,0 +1,27 @@
+{
+  "started_at_utc": "2026-09-03T16:25:15.735625+00:00",
+  "endpoint": "/ready",
+  "method": "GET",
+  "requests": 200,
+  "workers": 16,
+  "warmup_requests": 5,
+  "duration_seconds": 0.6533028000267223,
+  "throughput_rps": 306.1367561746549,
+  "successful_rps": 18.368205370479295,
+  "status_counts": {
+    "200": 12,
+    "429": 188
+  },
+  "error_rate": 0.94,
+  "latency_ms": {
+    "p50": 5.068700003903359,
+    "p95": 434.2703999718651,
+    "p99": 592.9894000291824
+  },
+  "successful_latency_ms": {
+    "p50": 525.3393999882974,
+    "p95": 644.5483000134118,
+    "p99": 644.5483000134118
+  },
+  "note": "Status 0 means transport failure; all-request latency includes errors."
+}

@@ -1,0 +1,36 @@
+UTC: 2026-09-03T16:31:41.938975+00:00
+Command: uv run --no-sync lab28 release
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+2026/09/03 23:31:45 INFO mlflow.utils.uv_utils: Detected uv project: found uv.lock and pyproject.toml in D:\DEV\Project\AI_THUC_CHIEN\LAB\NGAY28\TRACK2_Day28_2A202601424_NguyenQuangHa
+2026/09/03 23:31:45 WARNING mlflow.pyfunc: Passing a Python object as `python_model` causes it to be serialized using CloudPickle, it requires exercising caution as Python object serialization mechanisms may execute arbitrary code during deserialization.Consider using a file path (str or Path) instead. See https://mlflow.org/docs/latest/ml/model/models-from-code/ for details.
+2026/09/03 23:31:45 INFO mlflow.models.signature: Running the predict function to generate output based on input example
+2026/09/03 23:31:45 INFO mlflow.utils.uv_utils: Detected uv project: found uv.lock and pyproject.toml in D:\DEV\Project\AI_THUC_CHIEN\LAB\NGAY28\TRACK2_Day28_2A202601424_NguyenQuangHa
+2026/09/03 23:31:45 INFO mlflow.utils.environment: Detected uv project at D:\DEV\Project\AI_THUC_CHIEN\LAB\NGAY28\TRACK2_Day28_2A202601424_NguyenQuangHa. Attempting to export requirements via 'uv export'.
+2026/09/03 23:31:45 INFO mlflow.utils.uv_utils: Exported 43 dependencies via uv
+2026/09/03 23:31:45 INFO mlflow.utils.environment: Successfully exported 43 requirements from uv project. Skipping package capture based inference.
+2026/09/03 23:31:46 WARNING mlflow.utils.environment: Failed to resolve installed pip version. ``pip`` will be added to conda.yaml environment spec without a version specifier.
+2026/09/03 23:31:46 INFO mlflow.utils.uv_utils: Detected uv project: found uv.lock and pyproject.toml in D:\DEV\Project\AI_THUC_CHIEN\LAB\NGAY28\TRACK2_Day28_2A202601424_NguyenQuangHa
+2026/09/03 23:31:46 INFO mlflow.utils.uv_utils: Copied uv.lock to model artifacts
+2026/09/03 23:31:46 INFO mlflow.utils.uv_utils: Copied pyproject.toml to model artifacts
+Downloading artifacts:   0%|          | 0/9 [00:00<?, ?it/s]Downloading artifacts:  11%|█         | 1/9 [00:00<?, ?it/s]Downloading artifacts:  22%|██▏       | 2/9 [00:00<00:00, 3869.28it/s]Downloading artifacts:  33%|███▎      | 3/9 [00:00<00:00, 5803.93it/s]Downloading artifacts:  44%|████▍     | 4/9 [00:00<00:00, 7738.57it/s]Downloading artifacts:  56%|█████▌    | 5/9 [00:00<00:00, 9673.21it/s]Downloading artifacts:  67%|██████▋   | 6/9 [00:00<00:00, 11607.85it/s]Downloading artifacts:  78%|███████▊  | 7/9 [00:00<00:00, 13542.49it/s]Downloading artifacts:  89%|████████▉ | 8/9 [00:00<00:00, 15477.14it/s]Downloading artifacts: 100%|██████████| 9/9 [00:00<00:00, 572.03it/s]  Downloading artifacts: 100%|██████████| 9/9 [00:00<00:00, 572.03it/s]
+Registered model 'lab28-rag-release' already exists. Creating a new version of this model...
+2026/09/03 23:31:47 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: lab28-rag-release, version 2
+Created version '2' of model 'lab28-rag-release'.
+🏃 View run release-v1 at: http://localhost:5000/#/experiments/1/runs/4ae61b0b6bd84431ad1ad3756b439e49
+🧪 View experiment at: http://localhost:5000/#/experiments/1
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 11.97it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 11.97it/s]
+registered lab28-rag-release v2 as champion
+{
+  "name": "lab28-rag-release",
+  "version": "2",
+  "run_id": "4ae61b0b6bd84431ad1ad3756b439e49",
+  "alias": "champion",
+  "prompt_version": "v1",
+  "vllm_model_id": "Qwen/Qwen3-1.7B",
+  "embedding_model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2@faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+  "delta_version": 1,
+  "top_k": 3
+}
+
+Exit code: 0

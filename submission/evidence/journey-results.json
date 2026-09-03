@@ -1,0 +1,342 @@
+{
+  "finished_at_utc": "2026-09-03T16:37:41.824791+00:00",
+  "exit_code": 0,
+  "tests": [
+    {
+      "test": "integration-tests/test_gateway_rate_limit.py::test_the_burst_is_refused_at_the_edge",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002804999821819365
+    },
+    {
+      "test": "integration-tests/test_gateway_rate_limit.py::test_a_refusal_is_still_a_correlatable_response",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.00014730001566931605
+    },
+    {
+      "test": "integration-tests/test_gateway_rate_limit.py::test_the_bucket_refills",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 1.0062511999858543
+    },
+    {
+      "test": "integration-tests/test_gateway_rate_limit.py::test_the_gateway_counts_what_it_refused",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.1543892999761738
+    },
+    {
+      "test": "integration-tests/test_gateway_rate_limit.py::test_the_gateway_answers_its_own_health_route",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.3243413000018336
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_gateway_accepted_both_submissions",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003595000016503036
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_gateway_stamped_a_request_id",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0005857000360265374
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_response_carries_the_caller_s_trace_id",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0006684999680146575
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_event_reached_kafka_with_its_trace_context",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 3.089807100011967
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_pipeline_run_succeeded",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.00029689999064430594
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_run_published_the_lakehouse_asset_event",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0012011000071652234
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_lakehouse_advanced_and_holds_the_row",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.2790315999882296
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_feature_store_serves_the_new_asker",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.769269099982921
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_document_is_retrievable_from_the_vector_store",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.9001502999453805
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_a_champion_release_resolves",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.47655900003155693
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_journey_is_visible_in_prometheus",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.4099388000322506
+    },
+    {
+      "test": "integration-tests/test_j1_golden_path.py::test_the_journey_is_queryable_by_its_trace_id",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.42990399996051565
+    },
+    {
+      "test": "integration-tests/test_j2_idempotent_replay.py::test_repeated_submissions_share_one_idempotency_key",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.000375000003259629
+    },
+    {
+      "test": "integration-tests/test_j2_idempotent_replay.py::test_each_delivery_is_still_its_own_event",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.00027489999774843454
+    },
+    {
+      "test": "integration-tests/test_j2_idempotent_replay.py::test_the_broker_kept_every_delivery",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 3.0713516999967396
+    },
+    {
+      "test": "integration-tests/test_j2_idempotent_replay.py::test_both_pipeline_runs_succeeded",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.00022010004613548517
+    },
+    {
+      "test": "integration-tests/test_j2_idempotent_replay.py::test_the_first_run_collapsed_the_duplicate_batch",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0002587999915704131
+    },
+    {
+      "test": "integration-tests/test_j2_idempotent_replay.py::test_a_later_delivery_merges_into_the_same_row",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.03471839998383075
+    },
+    {
+      "test": "integration-tests/test_j2_idempotent_replay.py::test_the_table_version_may_advance_even_when_the_row_does_not",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.007796200050506741
+    },
+    {
+      "test": "integration-tests/test_j2_idempotent_replay.py::test_the_feature_row_counts_the_fact_once",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.37827819999074563
+    },
+    {
+      "test": "integration-tests/test_j2_idempotent_replay.py::test_the_vector_store_holds_exactly_one_point_for_the_document",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.8515197000233456
+    },
+    {
+      "test": "integration-tests/test_j3_promotion_rollback.py::test_registering_a_release_creates_a_new_version",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.00032359996112063527
+    },
+    {
+      "test": "integration-tests/test_j3_promotion_rollback.py::test_the_version_carries_the_provenance_an_incident_review_needs",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0767729000071995
+    },
+    {
+      "test": "integration-tests/test_j3_promotion_rollback.py::test_the_champion_alias_moved_to_the_new_version",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.08437100000446662
+    },
+    {
+      "test": "integration-tests/test_j3_promotion_rollback.py::test_the_resolved_release_is_the_one_serving_will_load",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.40341369999805465
+    },
+    {
+      "test": "integration-tests/test_j3_promotion_rollback.py::test_rollback_moves_the_alias_to_the_previous_version",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.10970949998591095
+    },
+    {
+      "test": "integration-tests/test_j3_promotion_rollback.py::test_the_rolled_back_release_still_resolves_completely",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.42047190002631396
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_losing_the_feature_store_does_not_change_the_rotation_verdict",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 22.843077199999243
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_losing_the_vector_store_fails_the_readiness_check_closed",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 10.371768799959682
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_one_unparseable_message_does_not_fail_the_batch",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0008433000184595585
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_the_unparseable_message_is_parked_rather_than_dropped",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.00047969998558983207
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_the_good_record_in_the_same_batch_still_reached_the_lakehouse",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.056369800004176795
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_replay_puts_a_parked_event_back_on_its_original_topic",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 3.12031950004166
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_replay_refuses_to_reinject_a_payload_it_cannot_parse",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.000298099999781698
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_the_replayed_event_does_not_duplicate_the_row",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.04353570000967011
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_the_platform_ends_where_it_started",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.3075073000509292
+    },
+    {
+      "test": "integration-tests/test_j5_trace_metrics_continuity.py::test_the_gateway_stamps_a_request_id_on_what_it_proxies",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0005253999843262136
+    },
+    {
+      "test": "integration-tests/test_j5_trace_metrics_continuity.py::test_the_caller_trace_context_survives_the_proxy",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.00024389999452978373
+    },
+    {
+      "test": "integration-tests/test_j5_trace_metrics_continuity.py::test_the_request_is_counted_where_the_dashboard_reads",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.391280599986203
+    },
+    {
+      "test": "integration-tests/test_j5_trace_metrics_continuity.py::test_the_latency_of_that_request_is_observable",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.4023246999713592
+    },
+    {
+      "test": "integration-tests/test_j5_trace_metrics_continuity.py::test_the_readiness_verdict_is_visible_as_a_gauge",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.6510829000035301
+    },
+    {
+      "test": "integration-tests/test_j5_trace_metrics_continuity.py::test_the_synchronous_leg_is_one_trace",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.392454800021369
+    },
+    {
+      "test": "integration-tests/test_j5_trace_metrics_continuity.py::test_the_asynchronous_leg_joins_the_same_trace",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 1.2117976000299677
+    },
+    {
+      "test": "integration-tests/test_j5_trace_metrics_continuity.py::test_the_trace_crosses_process_boundaries",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.346084900025744
+    },
+    {
+      "test": "integration-tests/test_j5_trace_metrics_continuity.py::test_the_collector_exported_every_span_it_accepted",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 1.296152200025972
+    },
+    {
+      "test": "integration-tests/test_prometheus_targets.py::test_every_scraped_target_is_up",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.8695902000181377
+    },
+    {
+      "test": "integration-tests/test_prometheus_targets.py::test_every_component_that_exposes_metrics_is_scraped",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.42075510002905503
+    },
+    {
+      "test": "integration-tests/test_prometheus_targets.py::test_at_least_one_slo_alert_is_loaded",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.3742136000073515
+    },
+    {
+      "test": "integration-tests/test_prometheus_targets.py::test_every_rule_evaluates",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.4436794000212103
+    },
+    {
+      "test": "integration-tests/test_prometheus_targets.py::test_grafana_is_provisioned_from_configuration",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 1.0830838999827392
+    },
+    {
+      "test": "integration-tests/test_trace_span_coverage.py::test_the_matrix_and_the_code_agree_on_the_span_names",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0003816999960690737
+    }
+  ]
+}

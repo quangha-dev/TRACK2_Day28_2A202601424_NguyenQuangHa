@@ -18,6 +18,7 @@ from __future__ import annotations
 import base64
 import json
 import logging
+import time
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass
 from typing import Any
@@ -233,9 +234,8 @@ class EventPublisher:
 class BatchConsumer:
     """Manual-commit consumer that decodes and validates ``data.raw``.
 
-    Auto-commit is disabled on purpose. ``commit()`` is called by the caller
-    only after the Delta merge, the feature export and the vector upsert have
-    all succeeded.
+    Auto-commit is disabled. The ingestion task calls ``commit()`` after the
+    durable Delta write; downstream materialization has its own task retries.
     """
 
     def __init__(self, settings: KafkaSettings, *, topic: str | None = None) -> None:
@@ -266,10 +266,17 @@ class BatchConsumer:
         decoded: list[ConsumedMessage] = []
         poison: list[DeadLetterEnvelope] = []
         idle = 0
+        assignment_deadline = time.monotonic() + 30.0
 
         while len(decoded) + len(poison) < max_messages and idle < idle_polls:
             message = self._consumer.poll(poll_timeout)
             if message is None:
+                # Joining a group can take longer than three idle polls. Until
+                # assignment, silence says nothing about whether the topic is empty.
+                if not self._consumer.assignment():
+                    if time.monotonic() >= assignment_deadline:
+                        raise BrokerUnavailable("Kafka partition assignment timed out")
+                    continue
                 idle += 1
                 continue
             if message.error():
@@ -279,6 +286,7 @@ class BatchConsumer:
                     continue
                 raise BrokerUnavailable(str(error))
 
+            idle = 0
             headers = tuple(message.headers() or ())
             traceparent = traceparent_from_kafka_headers(headers)
             raw = message.value() or b""

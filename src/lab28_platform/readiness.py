@@ -363,7 +363,27 @@ def run_preflight() -> dict[str, object]:
     cpu_count = os.cpu_count() or 1
     memory_gib: float | None = None
     try:
-        if platform.system() == "Darwin":
+        if platform.system() == "Windows":
+            import ctypes
+            from ctypes import wintypes
+
+            class MemoryStatus(ctypes.Structure):
+                _fields_ = [
+                    ("length", wintypes.DWORD),
+                    ("load", wintypes.DWORD),
+                    *[(name, ctypes.c_ulonglong) for name in (
+                        "total_physical", "available_physical", "total_page_file",
+                        "available_page_file", "total_virtual", "available_virtual",
+                        "available_extended_virtual",
+                    )],
+                ]
+
+            status = MemoryStatus()
+            status.length = ctypes.sizeof(status)
+            if not ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(status)):
+                raise OSError("GlobalMemoryStatusEx failed")
+            memory_bytes = status.total_physical
+        elif platform.system() == "Darwin":
             memory_bytes = int(
                 subprocess.run(
                     ["sysctl", "-n", "hw.memsize"],

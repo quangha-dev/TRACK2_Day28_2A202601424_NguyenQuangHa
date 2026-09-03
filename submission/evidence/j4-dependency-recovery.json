@@ -1,0 +1,103 @@
+{
+  "captured_at_utc": "2026-09-03T16:37:08.673731+00:00",
+  "baseline": {
+    "status_code": 200,
+    "status": "degraded"
+  },
+  "after_recovery": {
+    "status_code": 200,
+    "body": {
+      "schema_version": "1",
+      "status": "degraded",
+      "components": [
+        {
+          "name": "kafka",
+          "ready": true,
+          "detail": "1 broker(s); 4 declared topics present",
+          "owner": "team-ingestion"
+        },
+        {
+          "name": "mlflow",
+          "ready": true,
+          "detail": "lab28-rag-release v2 is champion",
+          "owner": "team-data"
+        },
+        {
+          "name": "qdrant",
+          "ready": true,
+          "detail": "18 points; ok",
+          "owner": "team-serving"
+        },
+        {
+          "name": "vllm",
+          "ready": false,
+          "detail": "unreachable: ConnectError",
+          "owner": "team-serving"
+        },
+        {
+          "name": "feast",
+          "ready": true,
+          "detail": "ok",
+          "owner": "team-data"
+        }
+      ],
+      "trace_id": "b1f48b3fb05f3541f42cd4abe1e6a113"
+    }
+  },
+  "tests": [
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_losing_the_feature_store_does_not_change_the_rotation_verdict",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 22.843077199999243
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_losing_the_vector_store_fails_the_readiness_check_closed",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 10.371768799959682
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_one_unparseable_message_does_not_fail_the_batch",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.0008433000184595585
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_the_unparseable_message_is_parked_rather_than_dropped",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.00047969998558983207
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_the_good_record_in_the_same_batch_still_reached_the_lakehouse",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.056369800004176795
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_replay_puts_a_parked_event_back_on_its_original_topic",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 3.12031950004166
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_replay_refuses_to_reinject_a_payload_it_cannot_parse",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.000298099999781698
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_the_replayed_event_does_not_duplicate_the_row",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.04353570000967011
+    },
+    {
+      "test": "integration-tests/test_j4_degraded_recovery.py::test_the_platform_ends_where_it_started",
+      "phase": "call",
+      "outcome": "passed",
+      "duration_seconds": 0.3075073000509292
+    }
+  ]
+}

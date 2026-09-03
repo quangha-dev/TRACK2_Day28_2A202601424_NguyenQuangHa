@@ -1,0 +1,21 @@
+UTC: 2026-09-03T16:20:34.461759+00:00
+Command: uv run --no-sync lab28 topics
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+1 broker(s) at localhost:9092
+{
+  "topics": {
+    "data.raw": "created",
+    "data.processed": "created",
+    "model.events": "created",
+    "data.raw.dlq": "created"
+  },
+  "broker_topics": [
+    "data.processed",
+    "data.raw",
+    "data.raw.dlq",
+    "model.events"
+  ]
+}
+
+Exit code: 0

@@ -1,0 +1,9 @@
+UTC: 2026-09-03T16:33:29.788682+00:00
+Command: uv run --no-sync python -m pytest integration-tests -m "not gpu and not langsmith" -p scripts.evidence_plugin -q
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+................Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 16.99it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 16.70it/s]
+........................................                 [100%]
+56 passed, 16 deselected in 251.02s (0:04:11)
+
+Exit code: 0

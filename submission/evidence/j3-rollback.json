@@ -1,0 +1,27 @@
+{
+  "captured_at_utc": "2026-09-03T16:35:29.870359+00:00",
+  "previous_version": "2",
+  "promoted_release": {
+    "name": "lab28-rag-release",
+    "version": "3",
+    "run_id": "c7f14bf849d74fc3a9a3a079b635ac95",
+    "alias": "champion",
+    "prompt_version": "it-j3-4ca05320",
+    "vllm_model_id": "Qwen/Qwen3-1.7B",
+    "embedding_model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2@faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+    "delta_version": 6,
+    "top_k": 3
+  },
+  "rolled_back_release": {
+    "name": "lab28-rag-release",
+    "version": "2",
+    "run_id": "4ae61b0b6bd84431ad1ad3756b439e49",
+    "alias": "champion",
+    "prompt_version": "v1",
+    "vllm_model_id": "Qwen/Qwen3-1.7B",
+    "embedding_model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2@faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+    "delta_version": 1,
+    "top_k": 3
+  },
+  "assertion_passed": "integration-tests/test_j3_promotion_rollback.py::test_the_rolled_back_release_still_resolves_completely"
+}

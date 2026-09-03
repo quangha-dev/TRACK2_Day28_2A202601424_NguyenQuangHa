@@ -1,0 +1,21 @@
+UTC: 2026-09-03T16:50:07.424123+00:00
+Command: docker compose --env-file ports.local --profile full ps
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+NAME                              IMAGE                                                COMMAND                  SERVICE          CREATED          STATUS                    PORTS
+lab28-platform-airflow-1          lab28-platform-airflow                               "/usr/bin/dumb-init …"   airflow          20 minutes ago   Up 20 minutes (healthy)   0.0.0.0:8082->8080/tcp, [::]:8082->8080/tcp
+lab28-platform-api-1              lab28-platform-api                                   "lab28 serve --host …"   api              20 minutes ago   Up 20 minutes (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+lab28-platform-feast-1            lab28-platform-feast                                 "/bin/sh -ec 'python…"   feast            20 minutes ago   Up 14 minutes (healthy)   0.0.0.0:6566->6566/tcp, [::]:6566->6566/tcp, 0.0.0.0:6570->8000/tcp, [::]:6570->8000/tcp
+lab28-platform-gateway-1          envoyproxy/envoy:v1.39.1                             "/docker-entrypoint.…"   gateway          34 minutes ago   Up 33 minutes             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp, 0.0.0.0:9901->9901/tcp, [::]:9901->9901/tcp
+lab28-platform-grafana-1          grafana/grafana:13.2.1                               "/run.sh"                grafana          34 minutes ago   Up 33 minutes             0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+lab28-platform-jaeger-1           jaegertracing/all-in-one:1.76.0                      "/go/bin/all-in-one-…"   jaeger           34 minutes ago   Up 34 minutes             0.0.0.0:16686->16686/tcp, [::]:16686->16686/tcp
+lab28-platform-kafka-1            apache/kafka:4.3.1                                   "/__cacert_entrypoin…"   kafka            34 minutes ago   Up 34 minutes (healthy)   0.0.0.0:9092->9092/tcp, [::]:9092->9092/tcp
+lab28-platform-kafka-exporter-1   danielqsj/kafka-exporter:v1.9.0                      "/bin/kafka_exporter…"   kafka-exporter   34 minutes ago   Up 34 minutes             9308/tcp
+lab28-platform-mlflow-1           ghcr.io/mlflow/mlflow:v3.15.2                        "mlflow server --hos…"   mlflow           9 minutes ago    Up 9 minutes (healthy)    0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
+lab28-platform-otel-collector-1   otel/opentelemetry-collector-contrib:0.159.0         "/otelcol-contrib --…"   otel-collector   34 minutes ago   Up 34 minutes             0.0.0.0:4317-4318->4317-4318/tcp, [::]:4317-4318->4317-4318/tcp
+lab28-platform-prometheus-1       prom/prometheus:v3.14.0                              "/bin/prometheus --c…"   prometheus       34 minutes ago   Up 33 minutes             0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp
+lab28-platform-pushgateway-1      prom/pushgateway:v1.11.3                             "/bin/pushgateway"       pushgateway      34 minutes ago   Up 34 minutes             0.0.0.0:9091->9091/tcp, [::]:9091->9091/tcp
+lab28-platform-qdrant-1           qdrant/qdrant:v1.19.0                                "./entrypoint.sh"        qdrant           34 minutes ago   Up 14 minutes (healthy)   0.0.0.0:6333->6333/tcp, [::]:6333->6333/tcp
+lab28-platform-spark-connect-1    apache/spark:4.2.0-scala2.13-java17-python3-ubuntu   "/opt/entrypoint.sh …"   spark-connect    28 minutes ago   Up 28 minutes (healthy)   0.0.0.0:4040->4040/tcp, [::]:4040->4040/tcp, 0.0.0.0:15002->15002/tcp, [::]:15002->15002/tcp
+
+Exit code: 0

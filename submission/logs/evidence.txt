@@ -1,0 +1,36 @@
+UTC: 2026-09-03T16:40:58.641727+00:00
+Command: uv run --no-sync lab28 evidence
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+wrote evidence\ip03-delta-history.json
+D:\DEV\Project\AI_THUC_CHIEN\LAB\NGAY28\TRACK2_Day28_2A202601424_NguyenQuangHa\src\lab28_platform\vector_store.py:83: UserWarning: The model sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 now uses mean pooling instead of CLS embedding. In order to preserve the previous behaviour, consider either pinning fastembed version to 0.5.1 or using `add_custom_model` functionality.
+  self._dense = TextEmbedding(model_name=self._settings.embedding_model, **kwargs)
+wrote evidence\ip05-qdrant-search.json
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 50.41it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 50.41it/s]
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 64.16it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 64.16it/s]
+wrote evidence\ip06-mlflow-release.json
+wrote evidence\ip07-vllm-identity.json
+Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 50.89it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 48.43it/s]
+wrote evidence\integration-report.json
+7 evidence file(s) must come from outside this process
+{
+  "written": {
+    "ip03-delta-history.json": "evidence\\ip03-delta-history.json",
+    "ip05-qdrant-search.json": "evidence\\ip05-qdrant-search.json",
+    "ip06-mlflow-release.json": "evidence\\ip06-mlflow-release.json",
+    "ip07-vllm-identity.json": "evidence\\ip07-vllm-identity.json",
+    "integration-report.json": "evidence\\integration-report.json"
+  },
+  "failed": {},
+  "outstanding": {
+    "ip01-kafka-consume.json": "integration test: consume from data.raw and keep the headers",
+    "ip02-airflow-run.json": "Airflow: DAG run id, task states, asset event",
+    "ip04-feast-online.json": "Feast: online row after materialization",
+    "ip08-gateway.json": "gateway: a 200 and a 429 with x-request-id",
+    "ip09-prometheus-targets.json": "Prometheus: targets and alert rules",
+    "ip09-grafana-dashboards.json": "Grafana: provisioned dashboards from the live API",
+    "ip10-trace.json": "trace backend: one trace carrying the required span names"
+  }
+}
+
+Exit code: 0

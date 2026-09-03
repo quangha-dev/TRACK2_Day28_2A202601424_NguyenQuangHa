@@ -1,0 +1,36 @@
+{
+  "captured_at_utc": "2026-09-03T16:34:14.438119+00:00",
+  "scope": "ingestion and materialization; GPU answer UNVERIFIED",
+  "trace_id": "5e739965cc3b42308db54f30c85e226a",
+  "dag_run_id": "it-b356671d",
+  "delta_version": 4,
+  "mlflow_release": {
+    "name": "lab28-rag-release",
+    "version": "2",
+    "run_id": "4ae61b0b6bd84431ad1ad3756b439e49",
+    "alias": "champion",
+    "prompt_version": "v1",
+    "vllm_model_id": "Qwen/Qwen3-1.7B",
+    "embedding_model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2@faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+    "delta_version": 1,
+    "top_k": 3
+  },
+  "asker_id": "it-j1-e2435f68",
+  "doc_id": "it-j1-doc-e2435f68",
+  "idempotency_key": "fb:it-j1-e2435f68:4a2d8a67caab0f8215695be8fd510bfb",
+  "span_names": [
+    "POST /api/v1/documents",
+    "POST /api/v1/documents http receive",
+    "POST /api/v1/documents http send",
+    "POST /api/v1/feedback",
+    "POST /api/v1/feedback http receive",
+    "POST /api/v1/feedback http send",
+    "lab28.airflow.dag",
+    "lab28.api.ingest",
+    "lab28.gateway.request",
+    "lab28.kafka.consume",
+    "lab28.kafka.produce",
+    "lab28.spark.delta_merge"
+  ],
+  "assertion_passed": "integration-tests/test_j1_golden_path.py::test_the_journey_is_queryable_by_its_trace_id"
+}

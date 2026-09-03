@@ -4,5 +4,11 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ruff_cache/
-evidence/
+/evidence/
 readiness-report.json
+.pytest_temp/
+.env
+.env.*
+!.env.example
+ports.local
+*.zip

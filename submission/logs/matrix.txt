@@ -1,0 +1,7 @@
+UTC: 2026-09-03T16:22:29.784214+00:00
+Command: uv run --no-sync python scripts/verify_matrix.py
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+OK    245 checks passed: contracts\integration-matrix.yaml matches the repository
+
+Exit code: 0

@@ -14,8 +14,11 @@ moves the alias back, and the serving path notices on its next refresh.
 
 from __future__ import annotations
 
+import hashlib
 import json
+import subprocess
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any
 
 import mlflow
@@ -37,6 +40,31 @@ TAG_FEATURE_SERVICE = "lab28.feature_service"
 
 class RegistryUnavailable(RuntimeError):
     """MLflow is unreachable, or the requested release does not exist."""
+
+
+def source_provenance() -> dict[str, str]:
+    """Record the actual source snapshot, including uncommitted learner work."""
+    source = Path(__file__).resolve().parent
+    digest = hashlib.sha256()
+    for path in sorted(source.glob("*.py")):
+        digest.update(path.name.encode("utf-8"))
+        digest.update(path.read_bytes())
+    tags = {"lab28.source_sha256": digest.hexdigest()}
+    try:
+        revision = subprocess.run(
+            ["git", "rev-parse", "HEAD"], cwd=source, capture_output=True,
+            text=True, timeout=3, check=False,
+        )
+        if revision.returncode == 0:
+            tags["lab28.git_sha"] = revision.stdout.strip()
+            changes = subprocess.run(
+                ["git", "status", "--porcelain"], cwd=source, capture_output=True,
+                text=True, timeout=3, check=False,
+            )
+            tags["lab28.worktree_dirty"] = str(bool(changes.stdout.strip())).lower()
+    except (OSError, subprocess.TimeoutExpired):
+        pass
+    return tags
 
 
 @dataclass(frozen=True)
@@ -127,8 +155,10 @@ class ReleaseRegistry:
         with the version, which is what makes rollback meaningful.
         """
         mlflow.set_experiment(self._settings.experiment)
+        provenance = source_provenance()
         try:
             with mlflow.start_run(run_name=f"release-{spec.prompt_version}") as run:
+                mlflow.set_tags(provenance)
                 mlflow.log_params(spec.as_params())
                 if spec.evaluation:
                     mlflow.log_metrics(spec.evaluation)
@@ -150,7 +180,7 @@ class ReleaseRegistry:
             raise RegistryUnavailable(f"could not register release: {error}") from error
 
         version = self._version_for(info.model_uri, run_id)
-        for key, value in spec.as_tags().items():
+        for key, value in (spec.as_tags() | provenance).items():
             self._client.set_model_version_tag(
                 self._settings.model_name, version, key, value
             )
@@ -312,6 +342,17 @@ class ReleaseRegistry:
             return str(json.load(handle).get("template", ""))
 
     # -- health ------------------------------------------------------------
+
+    def evidence(self) -> dict[str, Any]:
+        """Read registry metadata and the actual model signature for IP06."""
+        release = self.resolve()
+        entry = self._client.get_model_version(release.name, release.version)
+        info = mlflow.models.get_model_info(f"models:/{release.name}/{release.version}")
+        return {
+            **release.to_dict(),
+            "tags": dict(entry.tags),
+            "signature": info.signature.to_dict() if info.signature else None,
+        }
 
     def health(self) -> dict[str, Any]:
         """Readiness: the registry answers, and a champion release exists."""

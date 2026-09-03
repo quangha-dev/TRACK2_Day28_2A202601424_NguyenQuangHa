@@ -23,6 +23,7 @@ import json
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 from typing import Annotated, Any
 
@@ -227,6 +228,13 @@ def seed(
             accepted[kind], rejected[kind] = [], []
             for row in selected:
                 response = client.post(f"/api/v1/{kind}", json=row)
+                # Envoy refills its local token bucket once per second. A 429
+                # has not reached ingestion, so retry the same payload briefly.
+                for _ in range(3):
+                    if response.status_code != 429:
+                        break
+                    time.sleep(1.0)
+                    response = client.post(f"/api/v1/{kind}", json=row)
                 target = accepted if response.status_code == 202 else rejected
                 target[kind].append(
                     response.json()
@@ -612,7 +620,7 @@ def evidence(
 
     write("ip03-delta-history.json", delta_history)
     write("ip05-qdrant-search.json", qdrant_search)
-    write("ip06-mlflow-release.json", lambda: ReleaseRegistry(settings.mlflow).health())
+    write("ip06-mlflow-release.json", lambda: ReleaseRegistry(settings.mlflow).evidence())
     write("ip07-vllm-identity.json", lambda: probe_identity(settings.vllm).to_dict())
 
     from lab28_platform import readiness
@@ -625,6 +633,7 @@ def evidence(
         "ip04-feast-online.json": "Feast: online row after materialization",
         "ip08-gateway.json": "gateway: a 200 and a 429 with x-request-id",
         "ip09-prometheus-targets.json": "Prometheus: targets and alert rules",
+        "ip09-grafana-dashboards.json": "Grafana: provisioned dashboards from the live API",
         "ip10-trace.json": "trace backend: one trace carrying the required span names",
     }
     _note(f"{len(outstanding)} evidence file(s) must come from outside this process")

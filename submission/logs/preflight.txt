@@ -1,0 +1,18 @@
+UTC: 2026-09-03T16:23:15.827969+00:00
+Command: uv run --no-sync lab28 preflight
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+profile: local-standard — continue locally
+{
+  "profile": "local-standard",
+  "local_ready": true,
+  "python": "3.11.9",
+  "docker_cli": true,
+  "docker_daemon": true,
+  "cpu_count": 20,
+  "memory_gib": 15.7,
+  "disk_free_gib": 23.0,
+  "next": "continue locally"
+}
+
+Exit code: 0

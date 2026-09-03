@@ -98,7 +98,7 @@ testpaths = ["tests"]
 # silently skips a hidden .pth — which makes the editable install vanish with no
 # error. Naming the source root here is one line and cannot fail that way.
 pythonpath = ["src"]
-addopts = "-ra --strict-markers"
+addopts = "-ra --strict-markers --basetemp=.pytest_temp"
 markers = [
   "matrix(id): implements a test id declared in contracts/integration-matrix.yaml",
   "integration: requires the full stack to be running",

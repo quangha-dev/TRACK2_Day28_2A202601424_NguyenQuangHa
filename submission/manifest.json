@@ -1,0 +1,89 @@
+{
+  "created_at_utc": "2026-09-03T17:08:49.555885+00:00",
+  "repository": "https://github.com/quangha-dev/TRACK2_Day28_2A202601424_NguyenQuangHa",
+  "files_complete_excluding_declared_gates": true,
+  "live_verification": "See original test logs and reports; file presence is not a pass.",
+  "declared_gates": {
+    "langsmith": "UNVERIFIED"
+  },
+  "required_ip_files": [
+    {
+      "point": "IP01",
+      "path": "evidence/ip01-kafka-consume.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "31dc2dbfe756c51fd44dd8f3eef22c9f3088c985c2c247cedf3a6730bd9ea832"
+    },
+    {
+      "point": "IP02",
+      "path": "evidence/ip02-airflow-run.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "6646206dc3392f3f81a8e417ff17f76d338c33f77f98c27f549ef688ea75cc6b"
+    },
+    {
+      "point": "IP03",
+      "path": "evidence/ip03-delta-history.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "d4aa84709b9f9126b37bd7366b9cecc3d8a39027143ba5fd3da1a8c8d87c87e9"
+    },
+    {
+      "point": "IP04",
+      "path": "evidence/ip04-feast-online.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "ed6a18234119ba72a11942109e1ae0c5afdf5cc416d241bb4e54894a7d299826"
+    },
+    {
+      "point": "IP05",
+      "path": "evidence/ip05-qdrant-search.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "6e1a463b151fb0d0aa1a9634b0875d727d538e36a00cfcdd6a486f2b2ea9863a"
+    },
+    {
+      "point": "IP06",
+      "path": "evidence/ip06-mlflow-release.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "556ec43a029a386160e6b9e520827ba75292318fd55bf0228c654ee120fbb32d"
+    },
+    {
+      "point": "IP07",
+      "path": "evidence/ip07-vllm-identity.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "8bc0dd7f15849035aba244ca7a973cde9293b616f3363a8f784140a44068c4dc"
+    },
+    {
+      "point": "IP08",
+      "path": "evidence/ip08-gateway.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "a9ef04baa100627127053c5e5e1230061e70c886f4f1bba7facbcb9245a6ed67"
+    },
+    {
+      "point": "IP09",
+      "path": "evidence/ip09-prometheus-targets.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "0a96b76767ad3d0b35cb88b9f14b77a0baa83ba5b285d893339b0649eff1bc8f"
+    },
+    {
+      "point": "IP09",
+      "path": "evidence/ip09-grafana-dashboards.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "dab2e6e88364849935c0a85edc88aabfd2593cb04ca5a90b47c68ee8286a7b4b"
+    },
+    {
+      "point": "IP10",
+      "path": "evidence/ip10-trace.json",
+      "file_present": true,
+      "status": "PRESENT",
+      "sha256": "321eb6d6e1b0806c59543d7a244a5873132cb3f8d369d3a5a237d818e98099f8"
+    }
+  ],
+  "missing": []
+}

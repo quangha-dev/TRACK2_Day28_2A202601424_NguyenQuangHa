@@ -1,0 +1,6 @@
+UTC: 2026-09-03T16:23:17.942770+00:00
+Command: docker compose --env-file ports.template --profile full config --quiet
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+
+Exit code: 0

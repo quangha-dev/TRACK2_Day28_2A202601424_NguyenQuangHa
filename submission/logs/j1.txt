@@ -1,0 +1,9 @@
+UTC: 2026-09-03T16:30:29.028269+00:00
+Command: uv run --no-sync python -m pytest integration-tests/test_j1_golden_path.py -m "not gpu and not langsmith" -p scripts.evidence_plugin -q -x
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+...........Downloading artifacts:   0%|          | 0/1 [00:00<?, ?it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 13.29it/s]Downloading artifacts: 100%|██████████| 1/1 [00:00<00:00, 13.29it/s]
+.                                                             [100%]
+12 passed, 3 deselected in 64.29s (0:01:04)
+
+Exit code: 0

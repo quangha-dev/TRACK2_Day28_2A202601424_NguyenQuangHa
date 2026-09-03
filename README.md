@@ -1,5 +1,10 @@
 # Day 28 Track 2 — Bài thực hành kết nối nền tảng AI
 
+Bài làm cá nhân của **Nguyễn Quang Hà — 2A202601424**, thực hiện trên
+[repo fork](https://github.com/quangha-dev/TRACK2_Day28_2A202601424_NguyenQuangHa).
+Hồ sơ và tình trạng các mục nộp nằm trong [`submission/README.md`](submission/README.md);
+phần giải thích kỹ thuật nằm trong [`ANSWERS.md`](ANSWERS.md).
+
 > **Bắt đầu ở đây.** Kho mã đã có sẵn phần khung. Bạn cần hoàn thiện 4 chức năng
 > quan trọng, kiểm tra kết quả sau từng bước và chuẩn bị trình bày 10 điểm kết
 > nối của hệ thống trước lớp. Có thể làm **cá nhân hoặc theo nhóm**.
@@ -92,8 +97,8 @@ docker compose version
 ## Bước 1 — Tải kho mã và tạo nhánh làm việc
 
 ```text
-git clone https://github.com/VinUni-AI20k/Day28-Modern-Platform-Lab-Student.git
-cd Day28-Modern-Platform-Lab-Student
+git clone https://github.com/quangha-dev/TRACK2_Day28_2A202601424_NguyenQuangHa.git
+cd TRACK2_Day28_2A202601424_NguyenQuangHa
 ```
 
 Nếu làm cá nhân:

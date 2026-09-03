@@ -1,0 +1,11 @@
+UTC: 2026-09-03T16:55:47.393528+00:00
+Command: wsl -d Ubuntu -- /root/.cache/lab28-vllm/bin/python -c "import torch, vllm; print('vLLM',vllm.__version__); print('PyTorch',torch.__version__); print('CUDA available',torch.cuda.is_available()); print('GPU',torch.cuda.get_device_name(0)); print('Free/total VRAM bytes',torch.cuda.mem_get_info())"
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+vLLM 0.28.0
+PyTorch 2.13.0+cu130
+CUDA available True
+GPU NVIDIA GeForce RTX 3050 Laptop GPU
+Free/total VRAM bytes (3459986228, 4294443008)
+
+Exit code: 0

@@ -1,0 +1,7 @@
+UTC: 2026-09-03T16:43:05.740104+00:00
+Command: kubectl config current-context
+Profile: non-GPU (LAB28_VLLM_REQUIRE_REAL=false)
+
+error: current-context is not set
+
+Exit code: 1

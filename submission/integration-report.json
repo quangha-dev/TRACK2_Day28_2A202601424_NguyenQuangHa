@@ -1,0 +1,31 @@
+{
+  "generated_at_utc": "2026-09-03T17:08:01Z",
+  "basis": [
+    "submission/logs/fast-suite.txt",
+    "submission/logs/integration-non-gpu.txt",
+    "submission/logs/matrix.txt",
+    "submission/evidence/*.json"
+  ],
+  "overall_status": "PARTIALLY_VERIFIED",
+  "summary": "Core and non-GPU integration passed. Real vLLM identity/metrics passed. GPU completion and serving-trace assertions were not rerun before submission.",
+  "results": {
+    "fast_suite": "95 passed",
+    "j1": "12 passed, 3 deselected",
+    "j2": "9 passed",
+    "integration_non_gpu_langsmith": "56 passed, 16 deselected",
+    "matrix": "245 checks passed"
+  },
+  "points": [
+    {"id": "IP01", "status": "VERIFIED", "evidence": "ip01-kafka-consume.json"},
+    {"id": "IP02", "status": "VERIFIED", "evidence": "ip02-airflow-run.json"},
+    {"id": "IP03", "status": "VERIFIED", "evidence": "ip03-delta-history.json + j2-replay.json"},
+    {"id": "IP04", "status": "VERIFIED", "evidence": "ip04-feast-online.json"},
+    {"id": "IP05", "status": "VERIFIED", "evidence": "ip05-qdrant-search.json"},
+    {"id": "IP06", "status": "VERIFIED", "evidence": "ip06-mlflow-release.json + j3-rollback.json"},
+    {"id": "IP07", "status": "IDENTITY_AND_METRICS_VERIFIED", "evidence": "ip07-vllm-identity.json", "remaining": "GPU completion assertion not rerun"},
+    {"id": "IP08", "status": "VERIFIED", "evidence": "ip08-gateway.json"},
+    {"id": "IP09", "status": "VERIFIED", "evidence": "ip09-prometheus-targets.json + ip09-grafana-dashboards.json"},
+    {"id": "IP10", "status": "INGESTION_TRACE_VERIFIED", "evidence": "ip10-trace.json", "remaining": "Serving-leg trace assertion not rerun"}
+  ],
+  "declared_unverified": ["LangSmith exporter", "live Kubernetes deployment", "GPU integration completion and serving trace"]
+}
